@@ -12,8 +12,7 @@ public class Address {
     private Long id;
     private Date creation;
     private String content;
-    private String auteur; // Nouvelle attribut auteur
-
+    private String auteur;
     public Long getId() {
         return id;
     }

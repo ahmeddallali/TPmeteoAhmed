@@ -14,7 +14,7 @@ public class Geometry {
             return type;
         }
 
-        // Setter Methods
+
 
         public void setType(String type) {
             this.type = type;

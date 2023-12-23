@@ -17,7 +17,7 @@ public class EtalabAddressResponse {
     public String query;
     public int limit = 1;
 
-    //toString
+
     @Override
     public String toString() {
         return "EtalabAPIAddress{" +
@@ -26,13 +26,6 @@ public class EtalabAddressResponse {
                 '}';
     }
 
-    /*public List<Feature> getFeatures() {
-        return features;
-    }*/
-
-   /* public void setFeatures(List<Feature> features) {
-        this.features = features;
-    }*/
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Feature {
