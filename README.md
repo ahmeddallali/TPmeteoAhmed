@@ -42,7 +42,7 @@
   3. La méthode GET est utilisée pour obtenir les informations
   4. Les paramètres sont passés en ajoutant "&latlng=" puis le couple de valeurs séparées par une virgule.
   5. La température et Les prévisions météo  se trouvent dans la section  forecast.
-## Lien Github : [https://github.com/ahmesd/TPAPI-DALLALI-AHMED.git](https://github.com/ahmeddallali/TPmeteoAhmed.git)https://github.com/ahmeddallali/TPmeteoAhmed.git
+## Lien Github : https://github.com/ahmeddallali/TPmeteoAhmed.git
 
     
 
