@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Results</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Blue border for tables */
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        /* Background color for table headers */
+        th {
+            background-color: #97b9ce;
+            color: black;
+            text-align: center;
+        }
+
+        /* Center the Weather Results section */
+        .center-content {
+            text-align: center;
+        }
+
+        /* Style for the sun image and weather data container */
+        .weather-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        .sun-image {
+            width: 100px; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 10px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="fragments/navbar"></div>
+
+<!-- Center the Weather Results heading -->
+<div class="container mt-4 center-content">
+    <h2>Weather Results for <span th:text="${address}"></span></h2>
+</div>
+
+<!-- Informations sur l'adresse entrée par l'utilisateur -->
+<div class="weather-container center-content">
+    <img class="sun-image" th:src="@{https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Latitude_and_Longitude_of_the_Earth_fr.svg/langfr-330px-Latitude_and_Longitude_of_the_Earth_fr.svg.png}" alt="Sun Image"/>
+    <h3 class="ml-3 my-3 center-content">Address Details 😊</h3>
+    <table class="table bg-info text-white">
+        <thead class="">
+        <tr>
+            <th scope="col">Adresse</th>
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+        </tr>
+        </thead>
+        <tbody class="">
+        <tr>
+            <td th:text="${address}"/>
+            <td th:text="${latitude}"/>
+            <td th:text="${longitude}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Informations sur la météo à votre addresse -->
+<div class="weather-container center-content">
+    <img class="sun-image" th:src="@{https://cdn-icons-png.flaticon.com/512/861/861059.png}" alt="Sun Image"/>
+    <h3 class="ml-3 my-3 center-content">Weather Information at Your Address 😊</h3>
+    <table class="table bg-info text-white">
+        <thead class="">
+        <tr>
+            <th scope="col">Temperature. Minimale.</th>
+            <th scope="col">Temperature. Maximale.</th>
+            <th scope="col">probabilité de pluie</th>
+        </tr>
+        </thead>
+        <tbody class="">
+        <tr>
+            <td th:text="${temperature_minimale}"/>
+            <td th:text="${temperature_maximale}"/>
+            <td th:text="${probabilite_pluie}"/>
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
